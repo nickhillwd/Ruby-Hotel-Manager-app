@@ -16,8 +16,12 @@ class HotelRoom
   end
 
   def check_in(guest, hotel)
-    @guest_details[guest.last_name] = guest
-    hotel.add_checked_in_guests(guest)
+    if hotel.rooms == 3
+      puts "Paradise inn only has 3 rooms to allocate"
+    else
+      @guest_details[guest.last_name] = guest
+      hotel.add_checked_in_guests(guest)
+    end
   end
 
   def check_out(guest, hotel)

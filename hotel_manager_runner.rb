@@ -10,16 +10,16 @@ paradise_inn = Hotel.new("Paradise Inn")
 #------ CREATE NEW ROOMS ------#
 # 3 rooms in my hotel
 
-room_1 = HotelRoom.new(1, "single")
-room_2 = HotelRoom.new(2, "double")
-room_3 = HotelRoom.new(1, "twin")
+room_1 = HotelRoom.new('1', "single")
+room_2 = HotelRoom.new('2', "double")
+room_3 = HotelRoom.new('3', "twin")
 
 #------ CREATE GUESTS ------#
 check_in_date = Date.parse('2015-11-28')
 check_out_date = Date.parse('2015-11-29')
-guest_1 = Guest.new("Smith", 1, "john@email.Com",check_in_date , check_out_date)
-guest_2 = Guest.new("Hill", 2, "nick@emAil.com" , '2015-11-28', '2015-11-29')
-guest_3 = Guest.new("Jones", 2, "jack@eMail.com", '2015-11-28', '2015-11-29')
+guest_1 = Guest.new("Smith", '1', "john@email.Com", check_in_date , check_out_date)
+guest_2 = Guest.new("Hill", '2', "nick@emAil.com" , check_in_date, check_out_date)
+guest_3 = Guest.new("Jones", '2', "jack@eMail.com", check_in_date, check_out_date)
 
 #------ ADD ROOMS TO HOTEL CLASS ------#
 
@@ -43,7 +43,10 @@ puts "HOTEL INFO"
 60.times{print"-"}
 puts"\n"
 puts "Hotel name:\t\t\t#{paradise_inn.hotel_name}"
-puts "Number of rooms:\t\t#{paradise_inn.capacity} rooms"
+puts "Number of rooms:\t\t#{paradise_inn.room_count} rooms"
+#puts "Paradise inn capacity:\t\t#{paradise_inn.capacity}"
+puts "Number of guests Checked in:\t#{paradise_inn.number_checked_in}"
+puts "Names of checked in guests:\t#{}"
 
 60.times{print"-"}
 puts"\n"
@@ -78,18 +81,24 @@ puts "Guest 1:"
 puts "Guest booking name:\t\t#{guest_1.last_name}"
 puts "Number in party\t\t\t#{guest_1.party_number}"
 puts "Guest email address:\t\t#{guest_1.email_address}"
+puts "Check in date:\t\t\t#{guest_1.check_in}"
+puts "Check out date:\t\t\t#{guest_1.check_out}"
 60.times{print"-"}
 puts"\n"
 puts "Guest 2:"
 puts "Guest booking name:\t\t#{guest_2.last_name}"
 puts "Number in party\t\t\t#{guest_2.party_number}"
 puts "Guest email address:\t\t#{guest_2.email_address}"
+puts "Check in date:\t\t\t#{guest_2.check_in}"
+puts "Check out date:\t\t\t#{guest_2.check_out}"
 60.times{print"-"}
 puts"\n"
 puts "Guest 3:"
 puts "Guest booking name:\t\t#{guest_3.last_name}"
 puts "Number in party\t\t\t#{guest_3.party_number}"
 puts "Guest email address:\t\t#{guest_3.email_address}"
+puts "Check in date:\t\t\t#{guest_3.check_in}"
+puts "Check out date:\t\t\t#{guest_3.check_out}"
 60.times{print"-"}
 puts"\n"
 
