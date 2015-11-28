@@ -6,26 +6,37 @@ require_relative('guests.rb')
 #------ CREATE NEW HOTEL ------#
 paradise_inn = Hotel.new("Paradise Inn")
 
-60.times{print"-"}
-puts"\n"
-puts "HOTEL INFO"
-60.times{print"-"}
-puts"\n"
-puts "Hotel name:\t\t\t#{paradise_inn.hotel_name}"
-puts "Number of rooms:\t\t#{paradise_inn.number_of_rooms} rooms"
-
-#Hotel capacity
-
-
-60.times{print"-"}
-puts"\n"
-
 #------ CREATE NEW ROOMS ------#
 # 3 rooms in my hotel
 
 room_1 = HotelRoom.new(1, "single")
 room_2 = HotelRoom.new(2, "double")
 room_3 = HotelRoom.new(1, "twin")
+
+#------ CREATE GUESTS ------#
+
+guest_1 = Guest.new("Smith", 1, "john@email.Com")
+guest_2 = Guest.new("Hill", 2, "niCk@email.com")
+guest_3 = Guest.new("Jones", 2, "jack@eMail.com")
+
+#------ ADD ROOMS TO HOTEL CLASS ------#
+
+paradise_inn.add_room(room_1)
+paradise_inn.add_room(room_2)
+paradise_inn.add_room(room_3)
+
+#------   TESTING ------#
+
+60.times{print"-"}
+puts"\n"
+puts "HOTEL INFO"
+60.times{print"-"}
+puts"\n"
+puts "Hotel name:\t\t\t#{paradise_inn.hotel_name}"
+puts "Number of rooms:\t\t#{paradise_inn.capacity} rooms"
+
+60.times{print"-"}
+puts"\n"
 
 puts "ROOM INFO"
 60.times{print"-"}
@@ -50,12 +61,6 @@ puts "Number of occupants:\\tt#{room_3.number_of_guests}"
 60.times{print"-"}
 puts"\n"
 
-#------ CREATE GUESTS ------#
-
-guest_1 = Guest.new("Smith", 1, "john@email.Com")
-guest_2 = Guest.new("Hill", 2, "niCk@email.com")
-guest_3 = Guest.new("Jones", 2, "jack@eMail.com")
-
 puts "GUEST INFO"
 60.times{print"-"}
 puts"\n"
@@ -78,37 +83,4 @@ puts "Guest email address:\t\t#{guest_3.email_address}"
 60.times{print"-"}
 puts"\n"
 
-
-
-
-
-
-
-
-
-# next step calculate the capacity of the hotel by putting the rooms in the room array in the hotel and retrieving the capacity info
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-#binding.pry;''
+binding.pry;''
