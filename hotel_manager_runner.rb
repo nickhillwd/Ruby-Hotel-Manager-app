@@ -25,6 +25,12 @@ paradise_inn.add_room(room_1)
 paradise_inn.add_room(room_2)
 paradise_inn.add_room(room_3)
 
+#------ CHECK IN ------#
+
+room_1.check_in(guest_1)
+room_2.check_in(guest_2)
+room_3.check_in(guest_3)
+
 #------   TESTING ------#
 
 60.times{print"-"}
@@ -45,19 +51,19 @@ puts "Room 1:"
 puts "Room number:\t\t\t#{room_1.room_number}"
 puts "Guest details:\t\t\t#{room_1.guest_details}"
 puts "Room type:\t\t\t#{room_1.room_type}"
-puts "Number of occupants:\t\t#{room_1.number_of_guests}"
+puts "Number of occupants:\t\t#{room_1.number_of_occupants}"
 60.times{print"-"}
 puts"\n"
 puts "Room number:\t\t\t#{room_2.room_number}"
 puts "Guest details:\t\t\t#{room_2.guest_details}"
 puts "Room type:\t\t\t#{room_2.room_type}"
-puts "Number of occupants:\t\t#{room_2.number_of_guests}"
+puts "Number of occupants:\t\t#{room_2.number_of_occupants}"
 60.times{print"-"}
 puts"\n"
 puts "Room number:\t\t\t#{room_3.room_number}"
 puts "Guest details:\t\t\t#{room_3.guest_details}"
 puts "Room type:\t\t\t#{room_3.room_type}"
-puts "Number of occupants:\\tt#{room_3.number_of_guests}"
+puts "Number of occupants:\t\t#{room_3.number_of_occupants}"
 60.times{print"-"}
 puts"\n"
 
