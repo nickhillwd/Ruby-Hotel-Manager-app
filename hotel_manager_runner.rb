@@ -1,4 +1,5 @@
 require ('pry-byebug')
+require 'date'
 require_relative('hotel.rb')
 require_relative('hotel_rooms.rb')
 require_relative('guests.rb')
@@ -15,9 +16,9 @@ room_3 = HotelRoom.new(1, "twin")
 
 #------ CREATE GUESTS ------#
 
-guest_1 = Guest.new("Smith", 1, "john@email.Com")
-guest_2 = Guest.new("Hill", 2, "niCk@email.com")
-guest_3 = Guest.new("Jones", 2, "jack@eMail.com")
+guest_1 = Guest.new("Smith", 1, "john@email.Com", 2015-11-28, 2015-11-29)
+guest_2 = Guest.new("Hill", 2, "nick@emAil.com" , 2015-11-28, 2015-11-29)
+guest_3 = Guest.new("Jones", 2, "jack@eMail.com", 2015-11-28, 2015-11-29)
 
 #------ ADD ROOMS TO HOTEL CLASS ------#
 
@@ -27,9 +28,11 @@ paradise_inn.add_room(room_3)
 
 #------ CHECK IN ------#
 
-room_1.check_in(guest_1)
-room_2.check_in(guest_2)
-room_3.check_in(guest_3)
+room_1.check_in(guest_1, paradise_inn)
+room_2.check_in(guest_2, paradise_inn)
+room_3.check_in(guest_3, paradise_inn)
+
+room_1.check_out(guest_1, paradise_inn)
 
 #------   TESTING ------#
 
