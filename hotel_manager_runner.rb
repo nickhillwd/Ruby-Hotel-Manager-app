@@ -13,6 +13,10 @@ puts "HOTEL INFO"
 puts"\n"
 puts "Hotel name:\t\t\t#{paradise_inn.hotel_name}"
 puts "Number of rooms:\t\t#{paradise_inn.number_of_rooms} rooms"
+
+#Hotel capacity
+
+
 60.times{print"-"}
 puts"\n"
 
@@ -82,7 +86,7 @@ puts"\n"
 
 
 
-
+# next step calculate the capacity of the hotel by putting the rooms in the room array in the hotel and retrieving the capacity info
 
 
 
