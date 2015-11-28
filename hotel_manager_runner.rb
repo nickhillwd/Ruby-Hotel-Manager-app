@@ -15,10 +15,11 @@ room_2 = HotelRoom.new(2, "double")
 room_3 = HotelRoom.new(1, "twin")
 
 #------ CREATE GUESTS ------#
-
-guest_1 = Guest.new("Smith", 1, "john@email.Com", 2015-11-28, 2015-11-29)
-guest_2 = Guest.new("Hill", 2, "nick@emAil.com" , 2015-11-28, 2015-11-29)
-guest_3 = Guest.new("Jones", 2, "jack@eMail.com", 2015-11-28, 2015-11-29)
+check_in_date = Date.parse('2015-11-28')
+check_out_date = Date.parse('2015-11-29')
+guest_1 = Guest.new("Smith", 1, "john@email.Com",check_in_date , check_out_date)
+guest_2 = Guest.new("Hill", 2, "nick@emAil.com" , '2015-11-28', '2015-11-29')
+guest_3 = Guest.new("Jones", 2, "jack@eMail.com", '2015-11-28', '2015-11-29')
 
 #------ ADD ROOMS TO HOTEL CLASS ------#
 
